@@ -11,11 +11,21 @@ html {
 }
 
 body {
-  background: white;
+  background: rgba(252, 245, 229, 1);
   font-family: "Poppins", sans-serif;
   font-weight: 400px;
   font-size: 16px;
   font-style: normal;
+  display: flex;
+  flex-direction: column;
+}
+
+nav.header {
+  position: absolute;
+  width: 1440px;
+  height: 46px;
+  left: 0px;
+  top: 0px;
 }
 
 header {
@@ -24,19 +34,43 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 20px 50px;
+  padding: 0px 0px 20px;
+  gap: 427px;
+  position: absolute;
+  width: 1280px;
+  height: 210px;
+  left: calc(50% - 1280px/2);
+  top: 80px;
   border-bottom: 1px solid rgba(33, 33, 33, 0.4);
 }
+
+.avatar-section {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 20px;
+  width: 505px;
+  height: 190px;
+}
+
 .properties{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  padding: 0px;
   gap: 12px;
   width: 420px;
   height: 190px;
-  padding-left: 20px;
 }
+
+#pic{
+  width: 190px;
+  height: 190px;
+  border-radius: 10px;
+}
+
 .details{
 display: flex;
 flex-direction: column;
@@ -44,18 +78,6 @@ align-items: flex-start;
 gap: 12px;
 width: 420px;
 height: 60px;
-}
-.avatar-section {
-  width: 505px;
-  height: 190px;
-  gap: 20px;
-  display: flex;
-}
-
-.avatar-section img{
-  width: 190px;
-  height: 190px;
-  border-radius: 4px;
 }
 
 .name{
@@ -78,23 +100,22 @@ height: 60px;
   margin-bottom: 8px;
 
 }
+
 .profile{
   display: flex;
   align-items: center;
   gap: 4px;
   width: 107.34px;
   height: 16px;
-  font-weight: 500;
+  font-weight: 500px;
   font-size: 16px;
-  color: #212121;
+  color: rgba(33, 33, 33, 0.7);
   text-decoration: none;
 }
 
 .profile img{
 width: 18.48px;
-height: 3.21px;
 }
-
 
 .button button {
   background-color: #212121;
@@ -109,14 +130,21 @@ height: 3.21px;
   gap: 8px;
   cursor: pointer;
 }
+
 .button img {
   width: 12px;
 }
 
 .footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  width: 104px;
   height: 16px;
-  color: #212121;
+  left: calc(50% - 104px/2);
+  top: 1340px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: rgba(33, 33, 33, 0.7);
 }
