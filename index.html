@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Insta Spot</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
 
 <head>
   <meta charset="UTF-8" />
@@ -8,29 +15,33 @@
   <title>Document</title>
 </head>
 
-<body>
-  <nav class="header">
-    <img src="./assets/icons/logo.svg" alt="logo" />
-  </nav>
-  <header>
-    <div>
-      <img src="./assets/images/avatar.png" alt="profile-image" />
+  <body>
+    <header>
+      <nav class="logo">
+        <img src="./assets/icons/logo.svg" alt="logo" />
+      </nav>
+
+      <!-- the news column -->
       <div>
-        <h3>Bessie Coleman</h3>
-        <p>Civil Aviator</p>
+        <div>
+          <img src="./assets/images/avatar.png" alt="profile-image" />
+          <div>
+            <h3>Bessie Coleman</h3>
+            <p>Civil Aviator</p>
+          </div>
+          <a href="#">
+            <img src="./assets/icons/edit.svg" alt="edit-profile" />
+            Edit Profile
+          </a>
+        </div>
+        <div>
+          <button>
+            <img src="./assets/icons/plus.svg" alt="new-post" />
+            New Post
+          </button>
+        </div>
       </div>
-      <a href="#">
-        <img src="./assets/icons/edit.svg" alt="edit-profile" />
-        Edit Profile
-      </a>
-    </div>
-    <div>
-      <button>
-        <img src="./assets/icons/plus.svg" alt="new-post" />
-        New Post
-      </button>
-    </div>
-  </header>
+    </header>
 
   <div class="container">
     <div class="card">
