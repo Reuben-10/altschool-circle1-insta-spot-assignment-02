@@ -6,11 +6,8 @@
   box-sizing: inherit;
 }
 
-html {
-  box-sizing: border-box;
-}
-
 body {
+  background: rgba(252, 245, 229, 1);
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -25,7 +22,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 10px 80px;
+  padding: 0.625rem;
 }
 
 .logo {
@@ -38,13 +35,89 @@ body {
   font-weight: 500;
   font-size: 1.25rem;
   letter-spacing: 4px;
-  text-transform: uppercase;
+  text-transform: uppercase;
 }
 
-/* I am adding this to hold the image for now */
-.avatar-img {
-  max-width: 14rem;
-  width: 100%;
+.banner {
+  background: rgba(252, 245, 229, 1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 30px 0 20px;
+  gap: 2rem;
+  max-width: 95%;
+  margin: 0 auto;
+  border-bottom: 1px solid rgba(33, 33, 33, 0.4);
+  flex-wrap: wrap;
+}
+
+.avatar-section {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.avatar-img{
+  width: 190px;
+  height: 190px;
+  border-radius: 10px;
+  object-fit: fill;
+}
+
+.properties{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0px;
+  gap: 0.75rem;
+  height: 190px;
+}
+
+.details{
+display: flex;
+flex-direction: column;
+}
+
+.name{
+  max-width: 420px;
+  font-weight: 500;
+  font-size: 2rem;
+  color: #212121;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.description{
+  font-weight: 500;
+  font-size: 1rem;
+  color: rgba(33, 33, 33, 0.7);
+  margin-bottom: 8px;
+}
+
+.edit-button{
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 2px;
+  border: none;
+  background-color: transparent;
+}
+
+.button button {
+  background-color: #212121;
+  color: white;
+  border: none;
+  padding:  0.625rem 1rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
 }
 
 /* main */
