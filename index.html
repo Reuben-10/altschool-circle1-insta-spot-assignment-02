@@ -8,23 +8,33 @@
     <link rel="stylesheet" href="/style.css" />
   </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Document</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Insta spot</title>
+  </head>
 
   <body>
     <header>
-      <nav class="logo">
-        <img src="./assets/icons/logo.svg" alt="logo" />
-      </nav>
+      <div
+        class="logo-container"
+        aria-roledescription="A container for the brand's logo"
+      >
+        <a href="#" class="logo">
+          <img src="./assets/icons/spot-logo.svg" alt="logo" />
+          <span class="logo-text">SPOT</span>
+        </a>
+      </div>
 
       <!-- the news column -->
       <div>
         <div>
-          <img src="./assets/images/avatar.png" alt="profile-image" />
+          <img
+            class="avatar-img"
+            src="./assets/images/avatar.png"
+            alt="profile-image"
+          />
           <div>
             <h3>Bessie Coleman</h3>
             <p>Civil Aviator</p>
@@ -43,60 +53,129 @@
       </div>
     </header>
 
-  <div class="container">
-    <div class="card">
-      <img src="./assets/images/Card1.jpg" class="card-img">
-      <div class="card-description">
-        <p>Val Thorens</p>
-        <img src="./assets/icons/Union.svg">
-      </div>
-    </div>
+    <main class="main">
+      <section class="container">
+        <!-- First Card -->
+        <div class="card">
+          <div class="card-img-container">
+            <img
+              class="card-img"
+              src="./assets/images/Card1.jpg"
+              alt="A room with a nice snowy view"
+            />
+          </div>
+          <!-- first card description -->
+          <div class="card-description">
+            <p class="card-title">Val Thorens</p>
+            <img
+              class="like-icon"
+              src="./assets/icons/Union.svg"
+              alt="heart icon"
+            />
+          </div>
+        </div>
 
-    <div class="card">
-      <img src="./assets/images/Card2.png" class="card-img">
-      <div class="card-description">
-        <p>Restuarant terrace</p>
-        <img src="./assets/icons/Union.svg">
-      </div>
-    </div>
+        <!-- second card -->
+        <div class="card">
+          <div class="card-img-container">
+            <img
+              class="card-img"
+              src="./assets/images/Card2.png"
+              alt="Showing the front view of a closed restaurant"
+            />
+          </div>
+          <!-- second card description -->
+          <div class="card-description">
+            <p class="card-title">Restuarant terrace</p>
+            <img
+              class="like-icon"
+              src="./assets/icons/Union.svg"
+              alt="heart icon"
+            />
+          </div>
+        </div>
 
-    <div class="card">
-      <img src="./assets/images/Card3.png" class="card-img">
-      <div class="card-description">
-        <p>An outdoor cafe</p>
-        <img src="./assets/icons/Union.svg">
-      </div>
-    </div>
+        <!-- third card -->
+        <div class="card">
+          <div class="card-img-container">
+            <img
+              class="card-img"
+              src="./assets/images/Card3.png"
+              alt="Outdoor restaurant with people sitted"
+            />
+          </div>
+          <!-- third card description -->
+          <div class="card-description">
+            <p class="card-title">An outdoor cafe</p>
+            <img
+              class="like-icon"
+              src="./assets/icons/Union.svg"
+              alt="heart icon"
+            />
+          </div>
+        </div>
 
-    <div class="card">
-      <img src="./assets/images/Card4.png" class="card-img">
-      <div class="card-description">
-        <p>A very long bride, over the forest...</p>
-        <img src="./assets/icons/Union.svg">
-      </div>
-    </div>
+        <!-- fourth card -->
+        <div class="card">
+          <div class="card-img-container">
+            <img
+              class="card-img"
+              src="./assets/images/Card4.png"
+              alt="A long bridge over a forest"
+            />
+          </div>
+          <!-- fourth card description -->
+          <div class="card-description">
+            <p class="card-title">A very long bride, over the forest...</p>
+            <img
+              class="like-icon"
+              src="./assets/icons/Union.svg"
+              alt="heart icon"
+            />
+          </div>
+        </div>
 
-    <div class="card">
-      <img src="./assets/images/Card5.png" class="card-img">
-      <div class="card-description">
-        <p>Tunnel with morning light</p>
-        <img src="./assets/icons/Union.svg">
-      </div>
-    </div>
+        <!-- fifth card -->
+        <div class="card">
+          <div class="card-img-container">
+            <img
+              class="card-img"
+              src="./assets/images/Card5.png"
+              alt=" A man walking in a tunnel with morning light shinning through"
+            />
+          </div>
+          <!-- fifth card description -->
+          <div class="card-description">
+            <p class="card-title">Tunnel with morning light</p>
+            <img
+              class="like-icon"
+              src="./assets/icons/Union.svg"
+              alt="heart icon"
+            />
+          </div>
+        </div>
 
-    <div class="card">
-      <img src="./assets/images/Card6.png" class="card-img">
-      <div class="card-description">
-        <p>Mountain house</p>
-        <img src="./assets/icons/Union.svg">
-      </div>
-    </div>
-  </div>
-  <div class="spots-line"></div>
-  <footer class="footer">
-    <p>2023 © Spots</p>
-  </footer>
-  
-</body>
+        <!-- Sixth card -->
+        <div class="card">
+          <div class="card-img-container">
+            <img src="./assets/images/Card6.png" class="card-img" />
+          </div>
+          <!-- sixth card description -->
+          <div class="card-description">
+            <p class="card-title">Mountain house</p>
+            <img
+              class="like-icon"
+              src="./assets/icons/Union.svg"
+              alt="heart icon"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
 
+    <!-- Footer -->
+    <footer class="footer">
+      <p>2023 © Spots</p>
+    </footer>
+  </body>
 </html>
