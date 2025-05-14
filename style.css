@@ -240,7 +240,7 @@ flex-direction: column;
 
   .banner {
     flex-direction: column;
-    text-align: center;
+    text-align: left;
     gap: 1rem;
   }
 
