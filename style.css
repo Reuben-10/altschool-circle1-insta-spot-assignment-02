@@ -11,22 +11,139 @@ html {
 }
 
 body {
+  background: rgba(252, 245, 229, 1);
   font-family: "Poppins", sans-serif;
-  font-weight: 400;
+  font-weight: 400px;
   font-size: 16px;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
 }
 
-.header {
+nav.header {
+  position: absolute;
+  width: 1440px;
+  height: 46px;
+  left: 0px;
+  top: 0px;
+}
+
+header {
+  background: rgba(252, 245, 229, 1);
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0px 0px 20px;
+  gap: 427px;
+  position: absolute;
+  width: 1280px;
+  height: 210px;
+  left: calc(50% - 1280px/2);
+  top: 80px;
+  border-bottom: 1px solid rgba(33, 33, 33, 0.4);
+}
+
+.avatar-section {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 20px;
+  width: 505px;
+  height: 190px;
+}
+#pic{
+  width: 190px;
+  height: 190px;
+  border-radius: 10px;
+}
+
+.properties{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 12px;
+  width: 420px;
+  height: 190px;
+}
+
+.details{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 12px;
+width: 420px;
+height: 60px;
+}
+
+.name{
+  width: 420px;
+  height: 32px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 100%;
+  color: #212121;
+  margin-bottom: 4px;
+}
+
+.description{
+  width: 97px;
+  height: 16px;
+  font-weight: 500px;
+  font-size: 16px;
+  line-height: 100%;
+  color: rgba(33, 33, 33, 0.7);
+  margin-bottom: 8px;
+
+}
+
+.profile{
+  display: flex;
   align-items: center;
-  padding: 10px 80px;
+  gap: 4px;
+  width: 107.34px;
+  height: 16px;
+  font-weight: 500px;
+  font-size: 16px;
+  color: rgba(33, 33, 33, 0.7);
+  text-decoration: none;
+}
+
+.profile img{
+width: 18.48px;
+}
+
+.button button {
+  background-color: #212121;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.button img {
+  width: 12px;
 }
 
 .footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  width: 104px;
   height: 16px;
-  color: #212121;
+  left: calc(50% - 104px/2);
+  top: 1340px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: rgba(33, 33, 33, 0.7);
 }
