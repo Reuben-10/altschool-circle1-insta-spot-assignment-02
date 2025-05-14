@@ -190,3 +190,84 @@ flex-direction: column;
     gap: 4.6rem 2rem;
   }
 }
+
+/* Media queries styling for small Laptop Screens (up to 1024px wide) */
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .banner {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 20px 0;
+  }
+
+  .avatar-section {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .avatar-img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .properties {
+    height: auto;
+    justify-content: center;
+  }
+
+  .name {
+    font-size: 1.75rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+}
+
+/* Tablets (up to 768px wide) */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .banner {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .avatar-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .avatar-img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .properties {
+    align-items: center;
+    text-align: center;
+  }
+
+  .name {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .button {
+    margin-top: 1rem;
+  }
+}
