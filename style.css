@@ -14,6 +14,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 .header {
@@ -23,10 +24,51 @@ body {
   padding: 10px 80px;
 }
 
+.container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px 20px;
+  margin: 20px 180px 30px 35px;
+}
+
+.card-img
+{
+  width: 413px;
+  height: 413px;
+  border-radius: 10px;
+}
+
+.card-description
+{
+  position: relative;
+}
+
+.card-description p{
+font-weight: 500;
+font-size: 20px;
+color: rgba(33, 33, 33, 1);
+margin-top: 5px;
+}
+
+.card-description img{
+position: absolute;
+right: 0;
+top: 4px;
+opacity: 0.5;
+}
+
+.spots-line{
+  width: 1280px;
+  height: 1px;
+  background-color: rgba(33, 33, 33, 0.4);
+  margin: 20px auto
+}
+
 .footer {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 16px;
   color: #212121;
+  margin-top: 50px;
 }
