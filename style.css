@@ -41,14 +41,25 @@ body {
   text-transform: uppercase;
 }
 
+/* I am adding this to hold the image for now */
+.avatar-img {
+  max-width: 14rem;
+  width: 100%;
+}
+
+/* main */
+
+.main {
+  max-width: 95%;
+  margin: 0 auto;
+}
 /* The container holding the cards */
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem 1.3rem;
-  max-width: 95%;
-  margin: 0 auto;
   padding: 2.5rem 0;
+  width: 100%;
   border-bottom: 1px solid #21212166;
   /* gap: 30px 20px; */
   /* margin: 20px 180px 30px 35px; */
@@ -96,7 +107,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 16px;
-  color: #212121;
-  margin-top: 50px;
+  padding: 1rem;
+}
+
+/* Media query for 620px */
+@media (max-width: 38.75rem) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4.6rem 2rem;
+  }
 }
