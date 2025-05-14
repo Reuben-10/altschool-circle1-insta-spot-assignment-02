@@ -16,23 +16,6 @@ body {
   overflow-x: hidden;
 }
 
-/* .logo-container {
-  background: rgba(255, 255, 255, 0.8);
-  font-size: 1rem;
-  display: flex; */
-  /* flex-direction: column; */
-  /* min-height: 100vh; */
-/* } */
-
-/* nav.header {
-  position: fixed;
-  background-color: white;
-  width: 100%;
-  height: 46px;
-  left: 0px;
-  top: 0px;
-} */
-
 .logo-container {
   background: rgba(255, 255, 255, 0.8);
   display: flex;
@@ -194,11 +177,10 @@ flex-direction: column;
 }
 
 .footer {
-  gap: 0.25rem;
-  font-weight: 500;
-  font-size: 1rem;
-  color: rgba(33, 33, 33, 0.7);
-  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }
 
 /* Media query for 620px */
