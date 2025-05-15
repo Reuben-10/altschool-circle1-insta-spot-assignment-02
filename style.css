@@ -51,8 +51,7 @@ body {
   padding: 1.875rem 0 1.25rem;
   max-width: 95%;
   margin: 0 auto;
-  border-bottom: 1px solid rgba(33, 33, 33, 0.4);
-  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(33, 33, 33, 0.4
 }
 
 .avatar-section {
@@ -194,6 +193,11 @@ body {
 @media (max-width: 768px) {
   .banner {
     max-width: 90%;
+  }
+
+  .avatar-img {
+    width: 10rem;
+    height: 10rem;
   }
 
   .main {
