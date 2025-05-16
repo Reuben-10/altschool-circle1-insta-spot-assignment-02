@@ -246,10 +246,6 @@ body {
   .banner {
     padding-bottom: 1.8rem;
   }
-  .avatar-img {
-    width: 7rem;
-    height: 7rem;
-  }
 
   .name {
     font-size: 1.25rem;
@@ -260,11 +256,18 @@ body {
   }
 
   .card-img-container {
-    max-width: 288px;
-    max-height: 288px;
+    /* max-width: 288px; */
+    max-height: 18rem;
   }
 
   .footer {
     padding: 1.5rem;
+  }
+}
+
+/* 342.4px */
+@media (max-width: 21.4rem) {
+  .card-img-container {
+    max-height: 15rem;
   }
 }
