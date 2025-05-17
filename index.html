@@ -3,91 +3,200 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Insta Spot</title>
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Insta spot</title>
   </head>
 
   <body>
-    <header>
-      <nav class="logo">
-        <img src="./assets/icons/logo.svg" alt="logo" />
-      </nav>
+    <header role="banner">
+      <div class="logo-container" aria-label="Logo container">
+        <a href="#" class="logo" aria-label="Go to homepage">
+          <img src="./assets/icons/spot-logo.svg" alt="logo" />
+          <span class="logo-text">SPOTS</span>
+        </a>
+      </div>
 
       <!-- the news column -->
-      <div>
-        <div>
-          <img src="./assets/images/avatar.png" alt="profile-image" />
-          <div>
-            <h3>Bessie Coleman</h3>
-            <p>Civil Aviator</p>
+      <div class="banner" aria-label="User profile banner">
+        <div class="avatar-section" role="group" aria-label="User information">
+          <img
+            class="avatar-img"
+            src="./assets/images/avatar.png"
+            alt="Profile image of Bessie Coleman"
+          />
+          <div class="properties">
+            <div class="details">
+              <h3 class="name">Bessie Coleman</h3>
+              <p class="description">Civil Aviator</p>
+            </div>
+
+            <button
+              class="btn edit-button"
+              type="button"
+              aria-label="Edit profile"
+            >
+              <img src="./assets/icons/edit.svg" alt="edit-profile" />
+              Edit Profile
+            </button>
           </div>
-          <a href="#">
-            <img src="./assets/icons/edit.svg" alt="edit-profile" />
-            Edit Profile
-          </a>
         </div>
-        <div>
-          <button>
-            <img src="./assets/icons/plus.svg" alt="new-post" />
-            New Post
-          </button>
-        </div>
+
+        <button
+          type="button"
+          class="btn post-button"
+          aria-label="Create new post"
+        >
+          <img src="./assets/icons/plus.svg" alt="new-post" />
+          New Post
+        </button>
       </div>
     </header>
 
-    <main class="container">
-      <div class="card">
-        <img src="./assets/images/Card1.jpg" />
-        <div class="card-description">
-          <p>Val Thorens</p>
-          <img src="./assets/icons/plus.svg" />
-        </div>
-      </div>
+    <main class="main">
+      <section class="container" aria-label="Photo gallery">
+        <!-- First Card -->
+        <article class="card">
+          <div class="card-img-container">
+            <img
+              class="card-img"
+              src="./assets/images/Card1.jpg"
+              alt="Snow-covered mountains in Val Thorens"
+            />
+          </div>
 
-      <div class="card">
-        <img src="./assets/images/Card2.png" />
-        <div class="card-description">
-          <p>Restuarant terrace</p>
-          <img src="./assets/icons/plus.svg" />
-        </div>
-      </div>
+          <!-- first card description -->
+          <div class="card-description">
+            <p class="card-title">Val Thorens</p>
+            <img
+              class="like-icon"
+              src="./assets/icons/Union.svg"
+              alt="heart icon"
+              role="button"
+              aria-hidden="true"
+            />
+          </div>
+        </article>
 
-      <div class="card">
-        <img src="./assets/images/Card3.png" />
-        <div class="card-description">
-          <p>An outdoor cafe</p>
-          <img src="./assets/icons/plus.svg" />
-        </div>
-      </div>
+        <!-- second card -->
+        <article class="card">
+          <div class="card-img-container">
+            <img
+              class="card-img"
+              src="./assets/images/Card2.png"
+              alt="Restaurant terrace with a view"
+            />
+          </div>
 
-      <div class="card">
-        <img src="./assets/images/Card4.png" />
-        <div class="card-description">
-          <p>A very long bride, over the forest...</p>
-          <img src="./assets/icons/plus.svg" />
-        </div>
-      </div>
+          <!-- second card description -->
+          <div class="card-description">
+            <p class="card-title">Restuarant terrace</p>
+            <img
+              class="like-icon"
+              src="./assets/icons/Union.svg"
+              alt="like icon"
+              role="button"
+              aria-hidden="true"
+            />
+          </div>
+        </article>
 
-      <div class="card">
-        <img src="./assets/images/Card5.png" />
-        <div class="card-description">
-          <p>Tunnel with morning light</p>
-          <img src="./assets/icons/plus.svg" />
-        </div>
-      </div>
+        <!-- third card -->
+        <article class="card">
+          <div class="card-img-container">
+            <img
+              class="card-img"
+              src="./assets/images/Card3.png"
+              alt="Outdoor cafe with people"
+            />
+          </div>
 
-      <div class="card">
-        <img src="./assets/images/Card6.png" />
-        <div class="card-description">
-          <p>Mountain house</p>
-          <img src="./assets/icons/plus.svg" />
-        </div>
-      </div>
+          <!-- third card description -->
+          <div class="card-description">
+            <p class="card-title">An outdoor cafe</p>
+            <img
+              class="like-icon"
+              src="./assets/icons/Union.svg"
+              alt="heart icon"
+              role="button"
+              aria-hidden="true"
+            />
+          </div>
+        </article>
+
+        <!-- fourth card -->
+        <article class="card">
+          <div class="card-img-container">
+            <img
+              class="card-img"
+              src="./assets/images/Card4.png"
+              alt="A long bridge over a forest"
+            />
+          </div>
+
+          <!-- fourth card description -->
+          <div class="card-description">
+            <p class="card-title">A very long bride, over the forest...</p>
+            <img
+              class="like-icon"
+              src="./assets/icons/Union.svg"
+              alt="heart icon"
+              role="button"
+              aria-hidden="true"
+            />
+          </div>
+        </article>
+
+        <!-- fifth card -->
+        <article class="card">
+          <div class="card-img-container">
+            <img
+              class="card-img"
+              src="./assets/images/Card5.png"
+              alt="A man walking in a tunnel with morning light shining through"
+            />
+          </div>
+
+          <!-- fifth card description -->
+          <div class="card-description">
+            <p class="card-title">Tunnel with morning light</p>
+            <img
+              class="like-icon"
+              src="./assets/icons/Union.svg"
+              alt="heart icon"
+              role="button"
+              aria-hidden="true"
+            />
+          </div>
+        </article>
+
+        <!-- Sixth card -->
+        <article class="card">
+          <div class="card-img-container">
+            <img
+              src="./assets/images/Card6.png"
+              alt="Mountain house"
+              class="card-img"
+            />
+          </div>
+
+          <!-- sixth card description -->
+          <div class="card-description">
+            <p class="card-title">Mountain house</p>
+            <img
+              class="like-icon"
+              src="./assets/icons/Union.svg"
+              alt="heart icon"
+              role="button"
+              aria-hidden="true"
+            />
+          </div>
+        </article>
+      </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
-      <p>2023 © Spots</p>
+      <p>2023 &copy; Spots</p>
     </footer>
   </body>
 </html>
