@@ -103,22 +103,36 @@ body {
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+  cursor: pointer;
   border: 1px solid transparent;
   font-size: 1rem;
+  font-family: inherit;
   font-weight: 500;
+  transition: all 0.2s ease-in-out;
 }
 
 .edit-button {
   width: fit-content;
   background-color: transparent;
+  opacity: 0.7;
+}
+
+.edit-button:hover,
+.edit-button:active {
+  opacity: 1;
 }
 
 .post-button {
   background-color: #212121;
-  color: white;
+  color: #fcf5e5;
   padding: 0.625rem 1rem;
   border-radius: 4px;
   padding: 1rem;
+}
+
+.post-button:hover,
+.post-button:active {
+  background: #212121cc;
 }
 
 /* main */
@@ -190,7 +204,7 @@ body {
 }
 
 /* Tablets (up to 768px wide) */
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   .banner {
     max-width: 90%;
   }
@@ -246,6 +260,10 @@ body {
   .banner {
     padding-bottom: 1.8rem;
   }
+  .avatar-img {
+    width: 7rem;
+    height: 7rem;
+  }
 
   .name {
     font-size: 1.25rem;
@@ -256,7 +274,6 @@ body {
   }
 
   .card-img-container {
-    /* max-width: 288px; */
     max-height: 18rem;
   }
 
