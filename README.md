@@ -43,17 +43,17 @@ Our goal was to simulate real-world collaboration by working together in a team 
 
 ---
 
-## 🔧 To Be Added
+### ✅ Project Status
 
-Implement JavaScript functionality to enable profile editing and allow users to create new posts dynamically.
+- [x] Pixel perfect design complete
+- [x] Responsive
+- [ ] JavaScript functionality (not required for this assignment)
 
 ---
 
-### ✅ Project Status
+## 🔧 To Be Added
 
-- [x] Complete
-- [x] Responsive
-- [ ] JavaScript functionality (not required for this assignment)
+Implement JavaScript functionality to enable profile editing and allow users to create new posts dynamically.
 
 ---
 
@@ -87,7 +87,7 @@ open index.html
 
 ## 👥 Team
 
-We are a team of **10 passionate learners** from **AltSchool Africa Circle 01**, collaborating to build this project from scratch.
+We are a team of _10 passionate learners_ from **AltSchool Africa Tinyuka School of Enginnering**, collaborating to build this project from scratch.
 
 - Ejiro Francess Ejoh
 - Reuben Agbor
@@ -108,60 +108,5 @@ Special thanks to:
 
 - **AltSchool Africa** – for providing a strong foundation in frontend development
 - **[Mr. Oluwasetemi Ojo](https://github.com/Oluwasetemi)** – our supportive instructor for the Tinyuka Frontend track
-
----
-
-## 💻 How to Run
-
-You can run this project locally with just a browser:
-
-bash
-
-# Clone the repo
-
-git clone https://github.com/Reuben-10/altschool-circle1-insta-spot-assignment-02.git
-
-# Navigate into the folder
-
-cd altschool-circle1-insta-spot-assignment-02
-
-# Open in your browser
-
-open index.html
-`
-
-> No installation or server setup required.
-
----
-
-## 📸 Screenshots
-
-| Desktop View                     | Mobile View                    |
-| -------------------------------- | ------------------------------ |
-| ![Desktop](./assets/Desktop.png) | ![Mobile](./assets/Mobile.png) |
-
----
-
-## 💡 Acknowledgements
-
-Special thanks to AltSchool Africa and [Mr. Oluwasetemi Ojo](https://github.com/Oluwasetemi) - The Tinyuka Frontend track instructor.
-
----
-
-## 👥 Circle one Team members
-
-We are a group of _10 students_ from AltSchool Circle 01.  
-Each member contributed to layout design, structure, responsiveness, and styling.
-
-- Ejiro Francess Ejoh
-- Reuben Agbor
-- Busari Olanrewaju
-- Esther Oluwatimilehin
-- Elinah Mmbone
-- Salaudeen Rukayat Temitope
-- Doris Senyah Afriyie
-- Adebomi Omodolapo Ademola
-- O-Oluyomi Boluwatife
-- Lateefat Bello
 
 ---
