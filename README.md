@@ -6,6 +6,8 @@ A responsive, static **photo-sharing web page** inspired by platforms like Insta
 
 Built collaboratively with **HTML** and **CSS**, this project focuses on layout precision, team coordination, and desktop-first design.
 
+## Screenshot
+
 ![Insta-Spot Screenshot](./assets/images/screenshot.png)
 
 ---
@@ -17,18 +19,16 @@ Our goal was to simulate real-world collaboration by working together in a team 
 
 > **The challenge**: Create a **static profile page** with a photo grid, user section, and minimal interactions — no JavaScript required.
 
+### 🌐 Live Demo
+
+🔗 [View Insta-Spot Live on Netlify](https://insta-spot-circle-01.netlify.app/)
+
 ---
 
 ## 🛠 Tech Stack
 
 - ⚙️ HTML5
 - 🎨 CSS3 (Flexbox + Grid)
-
----
-
-## 🌐 Live Demo
-
-🔗 [View Insta-Spot Live on Netlify](https://insta-spot-circle-01.netlify.app/)
 
 ---
 
