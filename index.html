@@ -7,15 +7,16 @@
     <title>Insta spot</title>
   </head>
 
-<body>
+  <body>
     <header role="banner">
       <div class="logo-container" aria-label="Logo container">
         <a href="#" class="logo" aria-label="Go to homepage">
-          <img src="./assets/icons/spot-logo.svg" alt="Spots logo" />
+          <img src="./assets/icons/spot-logo.svg" alt="logo" />
           <span class="logo-text">SPOTS</span>
         </a>
       </div>
 
+      <!-- the news column -->
       <div class="banner" aria-label="User profile banner">
         <div class="avatar-section" role="group" aria-label="User information">
           <img
@@ -30,24 +31,32 @@
               <p class="description">Civil Aviator</p>
             </div>
 
-            <button class="btn edit-button" type="button" aria-label="Edit profile">
-              <img src="./assets/icons/edit.svg" alt="" aria-hidden="true" />
+            <button
+              class="btn edit-button"
+              type="button"
+              aria-label="Edit profile"
+            >
+              <img src="./assets/icons/edit.svg" alt="edit-profile" />
               Edit Profile
             </button>
           </div>
         </div>
 
-        <button type="button" class="btn post-button" aria-label="Create new post">
-          <img src="./assets/icons/plus.svg" alt="" aria-hidden="true" />
+        <button
+          type="button"
+          class="btn post-button"
+          aria-label="Create new post"
+        >
+          <img src="./assets/icons/plus.svg" alt="new-post" />
           New Post
         </button>
       </div>
     </header>
 
-    <main class="main" role="main">
+    <main class="main">
       <section class="container" aria-label="Photo gallery">
-        <!-- Cards -->
-        <div class="card" role="article">
+        <!-- First Card -->
+        <article class="card">
           <div class="card-img-container">
             <img
               class="card-img"
@@ -56,18 +65,22 @@
               loading="lazy"
             />
           </div>
+
+          <!-- first card description -->
           <div class="card-description">
             <p class="card-title">Val Thorens</p>
             <img
               class="like-icon"
               src="./assets/icons/Union.svg"
-              alt="Like this post"
+              alt="heart icon"
               role="button"
+              aria-hidden="true"
             />
           </div>
-        </div>
+        </article>
 
-        <div class="card" role="article">
+        <!-- second card -->
+        <article class="card">
           <div class="card-img-container">
             <img
               class="card-img"
@@ -76,18 +89,22 @@
               loading="lazy"
             />
           </div>
+
+          <!-- second card description -->
           <div class="card-description">
-            <p class="card-title">Restaurant terrace</p>
+            <p class="card-title">Restuarant terrace</p>
             <img
               class="like-icon"
               src="./assets/icons/Union.svg"
-              alt="Like this post"
+              alt="like icon"
               role="button"
+              aria-hidden="true"
             />
           </div>
-        </div>
+        </article>
 
-        <div class="card" role="article">
+        <!-- third card -->
+        <article class="card">
           <div class="card-img-container">
             <img
               class="card-img"
@@ -96,18 +113,22 @@
               loading="lazy"
             />
           </div>
+
+          <!-- third card description -->
           <div class="card-description">
             <p class="card-title">An outdoor cafe</p>
             <img
               class="like-icon"
               src="./assets/icons/Union.svg"
-              alt="Like this post"
+              alt="heart icon"
               role="button"
+              aria-hidden="true"
             />
           </div>
-        </div>
+        </article>
 
-        <div class="card" role="article">
+        <!-- fourth card -->
+        <article class="card">
           <div class="card-img-container">
             <img
               class="card-img"
@@ -116,20 +137,23 @@
               loading="lazy"
             />
           </div>
+
+          <!-- fourth card description -->
           <div class="card-description">
-            <p class="card-title">A very long bridge, over the forest...</p>
+            <p class="card-title">A very long bride, over the forest...</p>
             <img
               class="like-icon"
               src="./assets/icons/Union.svg"
-              alt="Like this post"
+              alt="heart icon"
               role="button"
               aria-hidden="true"
               loading="lazy"
             />
           </div>
-        </div>
+        </article>
 
-        <div class="card" role="article">
+        <!-- fifth card -->
+        <article class="card">
           <div class="card-img-container">
             <img
               class="card-img"
@@ -138,41 +162,49 @@
               loading="lazy"
             />
           </div>
+
+          <!-- fifth card description -->
           <div class="card-description">
             <p class="card-title">Tunnel with morning light</p>
             <img
               class="like-icon"
               src="./assets/icons/Union.svg"
-              alt="Like this post"
+              alt="heart icon"
               role="button"
+              aria-hidden="true"
             />
           </div>
-        </div>
+        </article>
 
-        <div class="card" role="article">
+        <!-- Sixth card -->
+        <article class="card">
           <div class="card-img-container">
             <img
               src="./assets/images/Card6.png"
+              alt="Mountain house"
               class="card-img"
               loading="lazy"
             />
           </div>
+
+          <!-- sixth card description -->
           <div class="card-description">
             <p class="card-title">Mountain house</p>
             <img
               class="like-icon"
               src="./assets/icons/Union.svg"
-              alt="Like this post"
+              alt="heart icon"
               role="button"
+              aria-hidden="true"
             />
           </div>
-        </div>
+        </article>
       </section>
     </main>
 
-    <footer class="footer" role="contentinfo">
-      <p>&copy; 2023 Spots</p>
+    <!-- Footer -->
+    <footer class="footer">
+      <p>2023 &copy; Spots</p>
     </footer>
   </body>
-
 </html>
