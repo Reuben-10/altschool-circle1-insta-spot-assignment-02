@@ -1,4 +1,4 @@
-//Elinah- JavaScript for the modal 
+//Elinah- JavaScript for the modal HTML
   const modal = document.getElementById("postModal");
   const newPostBtn = document.querySelector(".post-button");
   const closeModal = document.getElementById("closeModal");
