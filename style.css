@@ -86,7 +86,7 @@ body {
   max-width: 26.25rem;
   font-weight: 500;
   font-size: 2rem;
-  text-align: center;
+  /* text-align: center; */
   color: #212121;
   margin-bottom: 0.5rem;
 }
@@ -96,6 +96,12 @@ body {
   font-size: 1rem;
   color: rgba(33, 33, 33, 0.7);
   margin-bottom: 0.5rem;
+}
+.profileBio {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 450px;
 }
 
 .btn {
@@ -129,11 +135,57 @@ body {
   padding: 0.625rem 1rem;
   border-radius: 4px;
   padding: 1rem;
+  min-width: 10%;
 }
 
 .post-button:hover,
 .post-button:active {
   background: #212121cc;
+}
+
+dialog {
+  display: none;
+  position: fixed;
+  top: 30%;
+  left: 35%;
+  padding: 20px;
+  /* min-height: 20%; */
+
+  & .dialog-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    & input {
+      min-width: 100%;
+      min-height: 1.7rem;
+      border: 2px solid #212121cc;
+      border-radius: 0.5rem;
+      padding: 0 0.5rem;
+    }
+
+    & input[type="file"] {
+      border: none;
+      border-radius: 0;
+    }
+
+    & textarea {
+      min-width: 100%;
+      min-height: 1.7rem;
+      border: 2px solid #212121cc;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+    }
+  }
+  & button {
+    background-color: #212121;
+    color: #fcf5e5;
+    padding: 0.625rem 1rem;
+    border-radius: 8px;
+    padding: 1rem;
+    border: none;
+    outline: none;
+  }
 }
 
 /* main */
@@ -224,6 +276,14 @@ body {
   .container {
     grid-template-columns: 1fr;
   }
+
+  dialog {
+    left: 25%;
+    top: 30%;
+  }
+  .post-button {
+    min-width: 20%;
+  }
 }
 
 /* Media query for 620px */
@@ -274,6 +334,7 @@ body {
 
   .description {
     font-size: 1rem;
+    padding: 0 2.2rem;
   }
 
   .card-img-container {
@@ -283,6 +344,23 @@ body {
   .footer {
     padding: 1.5rem;
   }
+  dialog {
+    left: 15%;
+    top: 40%;
+    max-width: 60%;
+    max-height: 80%;
+
+    & .dialog-container {
+      gap: 0.2rem;
+
+      & input {
+        min-width: 70%;
+      }
+      & textarea {
+        min-width: 70%;
+      }
+    }
+  }
 }
 
 /* 342.4px */
@@ -291,4 +369,3 @@ body {
     max-height: 15rem;
   }
 }
-
