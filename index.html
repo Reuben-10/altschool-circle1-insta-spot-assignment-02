@@ -27,24 +27,17 @@
             src="./assets/images/avatar.png"
             alt="Profile image of Bessie Coleman"
             loading="lazy"
-            id="profileImage"
           />
           <div class="properties">
             <div class="details">
-              <h3 class="name" id="profileName">Bessie Coleman</h3>
-              <p class="description" id="profileTitle">Civil Aviator</p>
-              <p class="description profileBio" id="profileBio">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Asperiores itaque impedit tempore quiporro! Lorem ipsum dolor
-                sit amet consectetur, adipisicing elit. Quasi, molestias.
-              </p>
+              <h3 class="name">Bessie Coleman</h3>
+              <p class="description">Civil Aviator</p>
             </div>
 
             <button
               class="btn edit-button"
               type="button"
               aria-label="Edit profile"
-              onclick="openEditModal()"
             >
               <img src="./assets/icons/edit.svg" alt="edit-profile" />
               Edit Profile
@@ -62,54 +55,6 @@
         </button>
       </div>
     </header>
-
-    <dialog id="editModal" aria-label="modal-section">
-      <div class="dialog-container">
-        <label>
-          Name:
-          <input
-            type="text"
-            name="text"
-            id="editName"
-            placeholder="Enter your name"
-            required
-            minlength="2"
-            maxlength="40"
-          />
-        </label>
-        <br />
-        <label>
-          Title:
-          <input
-            type="text"
-            name="text"
-            id="editTitle"
-            placeholder="Enter your title"
-            required
-            minlength="2"
-            maxlength="20"
-          />
-        </label>
-        <br />
-        <label>
-          Biography:
-          <textarea
-            name="textarea"
-            id="editBio"
-            required
-            minlength="2"
-            maxlength="100"
-          ></textarea>
-        </label>
-        <br />
-        <label>
-          Profile Image:
-          <input type="file" name="file" id="editImage" />
-        </label>
-        <button onclick="saveProfile()">Save</button>
-        <button onclick="closeEditModal()">Cancel</button>
-      </div>
-    </dialog>
 
     <main class="main" role="main">
       <section class="container" aria-label="Photo gallery">
