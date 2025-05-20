@@ -86,3 +86,12 @@ function saveProfile(event) {
   closeEditModal();
 }
 
+// function to close the modal onclick of the ESC key or clicking anywhere outside the modal 
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        closeEditModal();
+    }
+});
+
+
+

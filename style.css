@@ -150,8 +150,9 @@ dialog {
   left: 35%;
   padding: 20px;
   /* min-height: 20%; */
+  cursor: pointer;
 
-  & .dialog-container {
+  & .dialogContainer {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -185,6 +186,7 @@ dialog {
     padding: 1rem;
     border: none;
     outline: none;
+    cursor: pointer;
   }
 }
 
