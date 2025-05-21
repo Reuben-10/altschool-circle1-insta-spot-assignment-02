@@ -42,9 +42,9 @@
 
             <button
               class="btn edit-button"
+              id="editBtn"
               type="button"
               aria-label="Edit profile"
-              onclick="openEditModal()"
             >
               <img src="./assets/icons/edit.svg" alt="edit-profile" />
               Edit Profile
@@ -106,8 +106,8 @@
           Profile Image:
           <input type="file" name="file" id="editImage" />
         </label>
-        <button onclick="saveProfile()">Save</button>
-        <button onclick="closeEditModal()">Cancel</button>
+        <button id="saveBtn">Save</button>
+        <button id="cancelBtn">Cancel</button>
       </div>
     </dialog>
 
@@ -119,6 +119,6 @@
     <footer class="footer">
       <p>2023 &copy; Spots</p>
     </footer>
-    <script src="script.js"></script>
+    <script type="module" src="./js/script.js"></script>
   </body>
 </html>
