@@ -38,11 +38,7 @@ body {
   font-family: "DM Mono", monospace;
   font-weight: 500;
   font-size: 1.25rem;
-<<<<<<< HEAD
-  letter-spacing: 4px;
-=======
   letter-spacing: 0.25rem;
->>>>>>> 9807ebca1b667229eb4ef50ecf7dc303d2d5f4ff
   text-transform: uppercase;
 }
 
@@ -52,12 +48,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
-<<<<<<< HEAD
-  padding: 30px 0 20px;
-  gap: 2rem;
-=======
   padding: 1.875rem 0 1.25rem;
->>>>>>> 9807ebca1b667229eb4ef50ecf7dc303d2d5f4ff
   max-width: 95%;
   margin: 0 auto;
   border-bottom: 1px solid #21212166;
