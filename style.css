@@ -206,6 +206,12 @@ dialog {
   border-bottom: 1px solid #21212166;
 }
 
+/* -----styling for eech image card when focused */
+.card.focused {
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
 .card-img-container {
   width: 100%;
   max-height: 26.25rem;
@@ -253,6 +259,7 @@ dialog {
   padding: 1rem;
 }
 
+
 /* Media queries styling for small Laptop Screens (up to 1024px wide) */
 @media (max-width: 64rem) {
   .container {
@@ -260,6 +267,8 @@ dialog {
     gap: 2rem;
   }
 }
+
+
 
 /* Tablets (up to 768px wide) */
 @media (max-width: 48rem) {
