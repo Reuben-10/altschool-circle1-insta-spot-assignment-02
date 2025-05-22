@@ -1,8 +1,9 @@
 import { displayCards } from "./modules/displayCards.js";
 import { openEditModal, closeEditModal, saveProfile } from "./modules/profileEditor.js";
-
+import { previewableCards } from './modules/previewableCards.js'
 // Initialize
 displayCards(".container");
+ previewableCards(".container");
 
 // Attach event listeners (ensure elements exist in HTML)
 document.getElementById("editBtn").addEventListener("click", openEditModal);

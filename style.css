@@ -151,6 +151,7 @@ dialog {
   padding: 20px;
   /* min-height: 20%; */
   cursor: pointer;
+  z-index: 1;
 
   & .dialogContainer {
     display: flex;
@@ -246,6 +247,68 @@ dialog {
   opacity: 1;
 }
 
+/* The previewable cards */
+.previewable-modal
+{
+   display : none;
+   position: fixed;
+   left: 0;
+   top: 10%;
+   margin: auto;
+   max-width: 50em;
+   width: 21rem;
+border-radius: 10px;
+border: 1px solid #212121cc
+}
+
+.previewable-images
+{
+  position: relative;
+  transform: scale(0.9);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.previewable-modal.show .previewable-images {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.card-img
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 7px;
+  margin-top: 20px;
+}
+
+.previewable-images img{
+  width: 18rem;
+}
+
+.previewable-title
+{
+  margin-top: 20px;
+}
+
+.previewable-card {
+  transform: scale(0.8);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.delete-icon
+{
+ position: absolute;
+ right: 17px;
+ top: 10px;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+}
+  
 .footer {
   display: flex;
   justify-content: center;
