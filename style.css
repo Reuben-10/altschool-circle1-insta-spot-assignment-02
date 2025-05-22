@@ -182,7 +182,7 @@ dialog {
       padding: 0 0.5rem;
       padding: 0 15px;
       border: none;
-      border-bottom: 1px solid black;
+      border-bottom: 0.2px solid black;
       outline: none;
       background-color: transparent;
     }
@@ -394,16 +394,13 @@ dialog {
   dialog {
     left: 15%;
     top: 40%;
-    max-width: 60%;
+    max-width: 70%;
     max-height: 80%;
 
     & .dialog-container {
       gap: 0.2rem;
 
       & input {
-        min-width: 70%;
-      }
-      & textarea {
         min-width: 70%;
       }
     }
