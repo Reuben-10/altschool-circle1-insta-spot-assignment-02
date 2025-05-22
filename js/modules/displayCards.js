@@ -14,6 +14,18 @@ style.textContent = `
       fill: red;
       stroke: red;
     }
+      
+    .card-img-container {
+    overflow: hidden;
+  }
+
+  .card-img {
+    transition: transform 0.3s ease;
+  }
+
+  .card.focused .card-img {
+    transform: scale(1.1);
+  }
   `;
 document.head.appendChild(style);
 
