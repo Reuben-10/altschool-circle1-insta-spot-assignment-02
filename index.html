@@ -31,12 +31,17 @@
           />
           <div class="properties">
             <div class="details">
-              <h3 class="name" id="profileName">Bessie Coleman</h3>
-              <p class="description" id="profileTitle">Civil Aviator</p>
-              <p class="description profileBio" id="profileBio">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Asperiores itaque impedit tempore quiporro! Lorem ipsum dolor
-                sit amet consectetur, adipisicing elit. Quasi, molestias.
+              <h3 class="name" id="profileName">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Voluptatibus nam repellat sint laborum ratione, porro molestias
+                minima ad tempora! Dolorem inventore ipsum corrupti alias
+                sapiente at, atque quidem nemo fuga.
+              </h3>
+              <p class="description" id="profileTitle">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
+                maiores rem velit minus accusantium voluptas officiis totam
+                praesentium eaque ipsum! Sed iste tempore doloribus ipsa quasi
+                reiciendis labore, neque dicta!
               </p>
             </div>
 
@@ -65,8 +70,11 @@
 
     <dialog id="editModal" aria-label="modal-section">
       <div class="dialogContainer">
-        <label>
-          Name:
+        <div>
+          <div class="label-name">
+            <label for="editName">Name:</label>
+            <button class="btn2" id="cancelBtn">X</button>
+          </div>
           <input
             type="text"
             name="text"
@@ -74,9 +82,8 @@
             placeholder="Enter your name"
             required
             minlength="2"
-            maxlength="40"
           />
-        </label>
+        </div>
         <br />
         <label>
           Title:
@@ -87,27 +94,15 @@
             placeholder="Enter your title"
             required
             minlength="2"
-            maxlength="20"
           />
         </label>
         <br />
-        <label>
-          Biography:
-          <textarea
-            name="textarea"
-            id="editBio"
-            required
-            minlength="2"
-            maxlength="100"
-          ></textarea>
-        </label>
         <br />
         <label>
           Profile Image:
           <input type="file" name="file" id="editImage" />
         </label>
         <button id="saveBtn">Save</button>
-        <button id="cancelBtn">Cancel</button>
       </div>
     </dialog>
 
