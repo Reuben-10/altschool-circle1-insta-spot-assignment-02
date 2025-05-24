@@ -1,6 +1,6 @@
 export function setAutoFocus(containerSelector) {
   const container = document.querySelector(containerSelector);
-  console.log(container);
+
   if (!container) return;
 
   const firstImgCard = container.querySelector(".card");
@@ -12,7 +12,7 @@ export function setAutoFocus(containerSelector) {
     const hoveredCard = e.target.closest(".card");
     if (hoveredCard) {
       // Remove focus from all cards
-      container.querySelectorAll(".card").forEach(card => {
+      container.querySelectorAll(".card").forEach((card) => {
         card.classList.remove("focused");
       });
       // Add focus to hovered card
@@ -20,12 +20,9 @@ export function setAutoFocus(containerSelector) {
     }
   });
 
-
-  container.addEventListener('mouseleave', () => {
-    container.querySelectorAll('.card').forEach(card => {
-      card.classList.remove('focused');
+  container.addEventListener("mouseleave", () => {
+    container.querySelectorAll(".card").forEach((card) => {
+      card.classList.remove("focused");
     });
   });
 }
-
-
