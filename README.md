@@ -2,9 +2,9 @@
 
 ### AltSchool Africa – Circle 01 | Assignment 02
 
-A responsive, static **photo-sharing web page** inspired by platforms like Instagram and Pinterest.
+A responsive **photo-sharing web page** inspired by platforms like Instagram and Pinterest.
 
-Built collaboratively with **HTML** and **CSS**, this project focuses on layout precision, team coordination, and desktop-first design.
+Built collaboratively with **HTML**, **CSS** and **Javascript**, this project focuses on layout precision, team coordination, and desktop-first design.
 
 ## Screenshot
 
@@ -17,7 +17,7 @@ Built collaboratively with **HTML** and **CSS**, this project focuses on layout 
 This is the second group assignment in the **Tinyuka Frontend Track** at AltSchool Africa.
 Our goal was to simulate real-world collaboration by working together in a team of 10 students.
 
-> **The challenge**: Create a **static profile page** with a photo grid, user section, and minimal interactions — no JavaScript required.
+> **The challenge**: Create a **profile page** with a photo grid, user section, and minimal interactions.
 
 ### 🌐 Live Demo
 
@@ -27,18 +27,19 @@ Our goal was to simulate real-world collaboration by working together in a team 
 
 ## 🛠 Tech Stack
 
-- ⚙️ HTML5
-- 🎨 CSS3 (Flexbox + Grid)
+- HTML5
+- CSS3 (Flexbox + Grid)
+- Javascript
 
 ---
 
 ## 📁 Features
 
 - 👤 **User Profile**: Name, role, and avatar
-- ➕ **"New Post" Button**: Static, styled for future functionality
-- ✏️ **"Edit Profile" Button**: Static, styled for future functionality
+- ➕ **"New Post" Button**: User can add a new post containing an image and a title.
+- ✏️ **"Edit Profile" Button**: User can edit the profile name, description and image.
 - 🖼 **Responsive Gallery**: CSS grid layout for dynamic resizing
-- ❤️ **Like Icons**: Hover states using pure CSS
+- ❤️ **Like Icons**: Hover states and like functionalty
 - 📱 **Mobile-Friendly**: Optimized for all screen sizes
 
 ---
@@ -47,13 +48,13 @@ Our goal was to simulate real-world collaboration by working together in a team 
 
 - [x] Pixel perfect design complete
 - [x] Responsive
-- [ ] JavaScript functionality (not required for this assignment)
+- [x] JavaScript functionality
 
 ---
 
 ## 🔧 To Be Added
 
-Implement JavaScript functionality to enable profile editing and allow users to create new posts dynamically.
+Implement JavaScript functionality to save and delete posts to and from local storage
 
 ---
 

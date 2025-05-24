@@ -3,7 +3,7 @@ import { cardsData } from "./cards.js";
 export function previewableCards(containerSelector) {
   const container = document.querySelector(containerSelector);
   const previewableModal = document.querySelector(".previewable-modal");
-  
+
   let modalOpen = false;
   let clickedImage = null;
 
@@ -13,17 +13,25 @@ export function previewableCards(containerSelector) {
     if (!clickedImg) return; // Click wasn't on an image
 
     // Find the matching card data based on the clicked image src
-    const clcikedSrc = clickedImg.getAttribute("src");
-    const card = cardsData.find((c) => c.imgSrc === clcikedSrc);
+    const clickedSrc = clickedImg.getAttribute("src");
 
-    if (!card) return;
+    // Match using file name only
+    const clickedFileName = clickedSrc.split("/").pop();
+    const card = cardsData.find(
+      (c) => c.imgSrc.split("/").pop() === clickedFileName
+    );
+
+    if (!card) {
+      console.warn("No card found for image:", clickedSrc);
+      return;
+    }
 
     // Save the clicked image
     clickedImage = clickedImg;
 
-    //to show the previewable images when the images are clicked
-    previewableModal.style.display = "block";
+    // Clear and show modal
     previewableModal.innerHTML = "";
+    previewableModal.showModal();
     modalOpen = true;
 
     // Add body click listener (delayed to skip the current click)
@@ -35,40 +43,30 @@ export function previewableCards(containerSelector) {
     // Create and insert the clicked card preview
     const displayPreviewableCard = document.createElement("div");
     displayPreviewableCard.innerHTML = `
-    <div class="previewable-images">
-    <div class="card-img">
-    <img 
-     src="${card.imgSrc}"
-    alt="${card.imgAlt}"
-    />
-    </div>
-    <p class="previewable-title">${card.title}</p>
-    
-    </div>
-    `;
+         <div class="previewable-images">
+          <div class="card-img-container">
+            <img
+              src="${card.imgSrc}"
+              alt="${card.imgAlt}"
+              class="card-img preview-img"
+            />
+          </div>
+         <p class="previewable-title">${card.title}</p>
+      </div>
+         `;
     previewableModal.appendChild(displayPreviewableCard);
 
-    // create a delete icon
+    // Close icon
     const deleteIcon = document.createElement("img");
     deleteIcon.src = "./assets/icons/x-close-delete-svgrepo-com.svg";
     deleteIcon.classList.add("delete-icon");
-    previewableModal.appendChild(deleteIcon);
-
-    // it deletes the images when the delete icon is pressed
     deleteIcon.addEventListener("click", () => {
       closeModal();
     });
+    previewableModal.appendChild(deleteIcon);
   });
 
-  // It deletes when the esc key is clicked
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      closeModal();
-    }
-  });
-
-  // Body click handler
-  // it deletes when the user clicks on the outside
+  // Close when clicking outside modal content
   function bodyClickHandler(event) {
     const isInsideModal = event.target.closest(".previewable-images");
     const isOriginalImage = clickedImage && event.target === clickedImage;
@@ -78,12 +76,11 @@ export function previewableCards(containerSelector) {
     }
   }
 
-  //closes modal
   function closeModal() {
     if (!modalOpen) return;
     modalOpen = false;
-    previewableModal.style.display = "none";
-    previewableModal.classList.remove("show"); // reset animation state
+    previewableModal.close();
+    //  previewableModal.classList.remove("show"); // reset animation state
     document.body.removeEventListener("click", bodyClickHandler);
     clickedImage = null;
   }
