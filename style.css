@@ -287,7 +287,8 @@ body {
 /* -----styling for each image card when focused */
 .card.focused {
   /* box-shadow: 0 0 12px rgba(0, 0, 0, 0.5); */
-  transform: translateY(-1rem);
+  /* transform: translateY(-1rem); */
+  transform: scale(1);
 }
 
 .card-img {
@@ -353,7 +354,8 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-.like-icon:hover {
+.like-icon:hover,
+.like-icon.liked {
   opacity: 1;
 }
 
