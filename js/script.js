@@ -13,9 +13,9 @@ const newPostBtn = document.querySelector("#post-btn");
 const closePostModal = document.getElementById("closeModal");
 
 displayCards(".container");
-createNewPost();
 updateEditForm();
 previewableCards(".container");
+createNewPost();
 setAutoFocus(".container");
 
 // Attach event listeners (ensure elements exist in HTML)

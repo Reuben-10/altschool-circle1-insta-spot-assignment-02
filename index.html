@@ -23,7 +23,7 @@
       <div class="banner" aria-label="User profile banner">
         <div class="avatar-section" role="group" aria-label="User information">
           <img
-            class="avatar-img"
+            class="avatar-img" id="profileImage"
             src="./assets/images/avatar.png"
             alt="Profile image of Bessie Coleman"
             loading="lazy"
@@ -155,24 +155,6 @@
       <!-- previewable-modals -->
       <dialog class="previewable-modal modal" aria-label="previewable-modal"></dialog>
     </main>
-
-      <!--Created the Modal HTML -->
-    <div id="postModal" class="modal hidden">
-      <div class="modal-content">
-        <span id="closeModal" class="close">&times;</span>
-        <form id="newPostForm">
-          <label for="image">Image URL:</label>
-          <input type="url" id="image" required />
-          <br />
-
-          <label for="title">Title:</label>
-          <input type="text" id="title" required />
-
-          <button type="submit">Post</button>
-        </form>
-      </div>
-    </div>
-
 
     <!-- Footer -->
     <footer class="footer">
