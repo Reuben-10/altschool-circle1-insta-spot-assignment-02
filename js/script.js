@@ -1,16 +1,35 @@
 import { displayCards } from "./modules/displayCards.js";
-import { setAutoFocus} from "./modules/focusCard.js";
-import { openEditModal, closeEditModal, saveProfile } from "./modules/profileEditor.js";
-import { previewableCards } from './modules/previewableCards.js'
+import { setAutoFocus } from "./modules/focusCard.js";
+import { updateEditForm } from "./modules/profileEditor.js";
+import { previewableCards } from "./modules/previewableCards.js";
 import { createNewPost } from "./modules/newPost.js";
 
-// Initialize
+const modalEl = document.querySelector(".modal");
+const editBtnEl = document.getElementById("editBtn");
+const cancelBtn = document.getElementById("cancelBtn");
+
+const modalPost = document.getElementById("postModal");
+const newPostBtn = document.querySelector("#post-btn");
+const closePostModal = document.getElementById("closeModal");
+
 displayCards(".container");
- previewableCards(".container");
-setAutoFocus(".container"); 
-// enableHoverFocus(".container"); 
+createNewPost();
+updateEditForm();
+previewableCards(".container");
+setAutoFocus(".container");
 
 // Attach event listeners (ensure elements exist in HTML)
-document.getElementById("editBtn").addEventListener("click", openEditModal);
-document.getElementById("saveBtn").addEventListener("click", saveProfile);
-document.getElementById("cancelBtn").addEventListener("click", closeEditModal); 
+editBtnEl.addEventListener("click", () => {
+  modalEl.showModal();
+});
+cancelBtn.addEventListener("click", () => modalEl.close());
+newPostBtn.addEventListener("click", () => modalPost.showModal());
+closePostModal.addEventListener("click", () => modalPost.close());
+
+// Close modal by clicking outside
+window.addEventListener("click", (e) => {
+  if (e.target === modalPost || e.target === modalEl) {
+    modalPost.close();
+    modalEl.close();
+  }
+});

@@ -32,26 +32,22 @@
           <div class="properties">
             <div class="details">
               <h3 class="name" id="profileName">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatibus nam repellat sint laborum ratione, porro molestias
-                minima ad tempora! Dolorem inventore ipsum corrupti alias
-                sapiente at, atque quidem nemo fuga.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus nam repellat sint laborum ratione, porro molestias minima ad tempora! Dolorem inventore ipsum corrupti alias sapiente at, atque quidem nemo fuga.
               </h3>
               <p class="description" id="profileTitle">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
-                maiores rem velit minus accusantium voluptas officiis totam
-                praesentium eaque ipsum! Sed iste tempore doloribus ipsa quasi
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, maiores rem velit minus accusantium voluptas officiis totam
+                praesentium eaque ipsum! Sed is tempore doloribus ipsa quasi
                 reiciendis labore, neque dicta!
               </p>
             </div>
 
             <button
-              class="btn edit-button"
+              class="btn btn-light"
               id="editBtn"
               type="button"
               aria-label="Edit profile"
             >
-              <img src="./assets/icons/edit.svg" alt="edit-profile" />
+              <img src="./assets/icons/edit.svg" alt="edit icon" />
               Edit Profile
             </button>
           </div>
@@ -59,59 +55,106 @@
 
         <button
           type="button"
-          class="btn post-button"
+          class="btn btn-dark"
+          id="post-btn"
           aria-label="Create new post"
         >
-          <img src="./assets/icons/plus.svg" alt="new-post" />
+          <img src="./assets/icons/plus.svg" alt="+" />
           New Post
         </button>
       </div>
     </header>
 
-    <dialog id="editModal" aria-label="modal-section">
-      <div class="dialogContainer">
-        <div>
-          <div class="label-name">
+    <dialog class="modal" id="editModal" aria-label="modal-section">
+      <button class="btn btn-close btn-light" id="cancelBtn">X</button>
+      <form novalidate class="modal-form" id="editForm">
+        <!-- The profile name -->
+        <div class="name-edit form-content">
+          <div class="form-label">
             <label for="editName">Name:</label>
-            <button class="btn2" id="cancelBtn">X</button>
+            <span class="error hidden" id="name-error">Field cannot be empty</span>
           </div>
           <input
             type="text"
-            name="text"
+            name="profile-name"
             id="editName"
             placeholder="Enter your name"
             required
             minlength="2"
           />
         </div>
-        <br />
-        <label>
-          Description:
-          <input
+
+        <!-- The description -->
+         <div class="form-content description-edit">
+           <div class="form-label">
+                <label for="editDesc">
+                  Description:
+                </label>
+                <span class="error hidden" id="description-error">Field cannot be empty</span>
+            </div>
+            <input
             type="text"
             name="text"
-            id="editTitle"
-            placeholder="Enter your title"
+            id="editDesc"
+            placeholder="Enter your description"
             required
             minlength="2"
           />
         </label>
-        <br />
-        <br />
-        <label>
-          Profile Image:
-          <input type="file" name="file" id="editImage" />
-        </label>
-        <button id="saveBtn">Save</button>
-      </div>
+        </div>
+
+        <!-- For image upload -->
+         <div class="form-content avatar-upload">  
+            <label>
+              Profile Image:
+            </label>
+            <input type="file" name="file" id="editImage" />
+         </div>
+         <button type="submit" class="btn btn-dark" id="saveBtn">Save</button>
+      </form>
     </dialog>
+
+<!-- new post modal -->
+<dialog id="postModal" class="modal">
+  <button id="closeModal" class="btn btn-light btn-close">X</button>
+    <form novalidate class="modal-form" id="newPostForm">
+      <div class="form-content">
+        <div class="form-label">
+          <label>
+            Photo:
+          </label>
+          <span class="error hidden" id="post-img-error">Field cannot be empty</span>
+        </div>  
+        <input type="file" name="file" id="postImage" accept="image/*" class="hidden" />
+        <div id="customUpload" class="custom-upload">
+          <span id="uploadText">Click to upload image</span>
+          <img id="uploadPreview" class="upload-preview hidden" alt="Preview" />  
+        </div>
+     </div>
+      <div class="form-content">
+        <div class="form-label">
+          <label for="post-title">Title:</label>
+          <span class="error hidden" id="post-title-error">Field cannot be empty</span>
+        </div>
+        <input
+          type="text"
+          name="post-title"
+          id="post-title"
+          placeholder="Enter photo title"
+          required
+          minlength="2"
+         
+        />
+      </div>
+      <button type="submit" class="btn btn-dark">Post</button>
+    </form>
+</dialog>
 
     <main class="main" role="main">
       <section class="container" aria-label="Photo gallery"></section>
 
       <!-- previewable-modals -->
-      <dialog class="previewable-modal" aria-label="previewable-modal">
-      </dialog>
+      <dialog class="previewable-modal modal" aria-label="previewable-modal"></dialog>
     </main>
 
       <!--Created the Modal HTML -->

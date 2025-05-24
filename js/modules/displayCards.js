@@ -2,10 +2,6 @@ import { cardsData } from "./cards.js";
 
 const style = document.createElement("style");
 style.textContent = `
-    .like-icon {
-      cursor: pointer;
-    }
-
     .like-icon:focus {
       outline: none;
     }
@@ -17,10 +13,10 @@ style.textContent = `
       
     .card-img-container {
     overflow: hidden;
-  }
+    }
 
   .card-img {
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease-in-out;
   }
 
   .card.focused .card-img {
@@ -36,7 +32,7 @@ export function displayCards(containerSelector) {
 
   container.innerHTML = "";
 
-  cardsData.forEach(card => {
+  cardsData.forEach((card) => {
     const cardHTML = `
       <article class="card">
         <div class="card-img-container">
@@ -76,13 +72,10 @@ export function displayCards(containerSelector) {
   });
 
   // Event listener for toggling 'liked' class on like icons
-  container.addEventListener('click', (e) => {
-    const likeIcon = e.target.closest('.like-icon');
+  container.addEventListener("click", (e) => {
+    const likeIcon = e.target.closest(".like-icon");
     if (likeIcon) {
-      likeIcon.classList.toggle('liked')
-      ;
+      likeIcon.classList.toggle("liked");
     }
   });
-
-};
-// displayCards('.container');
+}
