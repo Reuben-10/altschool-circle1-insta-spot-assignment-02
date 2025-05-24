@@ -129,7 +129,6 @@ body {
 .btn-light {
   width: fit-content;
   background-color: transparent;
-  color: #212121;
   opacity: 0.7;
 }
 
@@ -606,5 +605,12 @@ body {
 
   .button {
     margin-top: 1rem;
+  }
+}
+
+/* 342.4px */
+@media (max-width: 21.4rem) {
+  .card-img-container {
+    max-height: 15rem;
   }
 }
