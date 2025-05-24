@@ -17,17 +17,21 @@ customUpload.addEventListener("click", () => {
 
 // Handle image preview on file select
 postImage.addEventListener("change", () => {
-  const file = postImage.files[0];
-  if (file) {
-    const reader = new FileReader();
-    reader.onload = function (e) {
-      uploadPreview.src = e.target.result;
-      uploadPreview.classList.remove("hidden");
-      uploadText.classList.add("hidden");
-    };
-    reader.readAsDataURL(file);
-  }
+  previewImage(postImage, uploadPreview, uploadText);
 });
+
+// postImage.addEventListener("change", () => {
+//   const file = postImage.files[0];
+//   if (file) {
+//     const reader = new FileReader();
+//     reader.onload = function (e) {
+//       uploadPreview.src = e.target.result;
+//       uploadPreview.classList.remove("hidden");
+//       uploadText.classList.add("hidden");
+//     };
+//     reader.readAsDataURL(file);
+//   }
+// });
 
 export function createNewPost() {
   postForm.addEventListener("submit", function (e) {

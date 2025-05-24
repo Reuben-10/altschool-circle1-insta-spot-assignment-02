@@ -18,6 +18,18 @@ previewableCards(".container");
 createNewPost();
 setAutoFocus(".container");
 
+function setupModalTrigger(trigger, modal) {
+  if (trigger && modal) {
+    trigger.addEventListener("click", () => modal.showModal());
+  }
+}
+
+function setupModalClose(button, modal) {
+  if (button && modal) {
+    button.addEventListener("click", () => modal.close());
+  }
+}
+
 // Attach event listeners (ensure elements exist in HTML)
 editBtnEl.addEventListener("click", () => {
   modalEl.showModal();

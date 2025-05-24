@@ -13,27 +13,31 @@ export function updateEditForm() {
   editForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    let hasError = false;
+    const validName = validateInput(newName, nameError);
+    const validDesc = validateInput(newDescription, descriptionError);
+    if (!validName || !validDesc) return;
+
+    // let hasError = false;
 
     // validate name
-    if (newName.value.trim().length < 2) {
-      nameError.classList.remove("hidden");
-      nameError.textContent = "Minimum of 2 characters";
-      hasError = true;
-    } else {
-      nameError.classList.add("hidden");
-    }
+    // if (newName.value.trim().length < 2) {
+    //   nameError.classList.remove("hidden");
+    //   nameError.textContent = "Minimum of 2 characters";
+    //   hasError = true;
+    // } else {
+    //   nameError.classList.add("hidden");
+    // }
 
     // validate description
-    if (newDescription.value.trim().length < 2) {
-      descriptionError.classList.remove("hidden");
-      descriptionError.textContent = "Minimum of 2 characters";
-      hasError = true;
-    } else {
-      descriptionError.classList.add("hidden");
-    }
+    // if (newDescription.value.trim().length < 2) {
+    //   descriptionError.classList.remove("hidden");
+    //   descriptionError.textContent = "Minimum of 2 characters";
+    //   hasError = true;
+    // } else {
+    //   descriptionError.classList.add("hidden");
+    // }
 
-    if (hasError) return;
+    // if (hasError) return;
 
     // Populate modal inputs with original values
     originalName.textContent = newName.value.trim();
