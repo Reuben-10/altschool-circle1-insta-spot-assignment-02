@@ -1,4 +1,3 @@
-// utils/dom.js
 export function getEl(selector) {
   return document.querySelector(selector);
 }
@@ -18,17 +17,6 @@ export function readImageFile(input, callback) {
     const reader = new FileReader();
     reader.onload = (e) => callback(e.target.result);
     reader.readAsDataURL(input.files[0]);
-  }
-}
-
-export function validateInput(input, errorEl, minLength = 2) {
-  const value = input.value.trim();
-  if (value.length < minLength) {
-    showError(errorEl, `Minimum of ${minLength} characters`);
-    return false;
-  } else {
-    hideError(errorEl);
-    return true;
   }
 }
 

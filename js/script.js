@@ -1,47 +1,49 @@
+import {
+  setupModalTrigger,
+  setupModalClose,
+  setupOutsideClickClose,
+} from "./utils/modalHelpers.js";
+
+import { getEl } from "./utils/dom.js";
 import { displayCards } from "./modules/displayCards.js";
 import { setAutoFocus } from "./modules/focusCard.js";
 import { updateEditForm } from "./modules/profileEditor.js";
 import { previewableCards } from "./modules/previewableCards.js";
 import { createNewPost } from "./modules/newPost.js";
 
-const modalEl = document.querySelector(".modal");
-const editBtnEl = document.getElementById("editBtn");
-const cancelBtn = document.getElementById("cancelBtn");
+const editModal = getEl("#editModal");
+const postModal = getEl("#postModal");
+const editBtnEl = getEl("#editBtn");
+const cancelBtn = getEl("#cancelBtn");
 
-const modalPost = document.getElementById("postModal");
-const newPostBtn = document.querySelector("#post-btn");
-const closePostModal = document.getElementById("closeModal");
+const modalPost = getEl("#postModal");
+const newPostBtn = getEl("#post-btn");
+const closePostModal = getEl("#closeModal");
+
+const editForm = getEl("#editForm");
+const nameError = getEl("#name-error");
+const descError = getEl("#description-error");
+const fileInput = getEl("#editImage");
+
+// Clear form and hide errors
+const clearFormErrors = () => {
+  editForm.reset();
+  nameError.classList.add("hidden");
+  descError.classList.add("hidden");
+  fileInput.value = "";
+};
+
+// set up modal openers and closers
+setupModalTrigger(editBtnEl, editModal);
+setupModalClose(cancelBtn, editModal, clearFormErrors);
+setupModalTrigger(newPostBtn, postModal);
+setupModalClose(closePostModal, postModal);
+
+// Close modal when clicking outside content
+setupOutsideClickClose([postModal, editModal], clearFormErrors);
 
 displayCards(".container");
 updateEditForm();
 previewableCards(".container");
 createNewPost();
 setAutoFocus(".container");
-
-function setupModalTrigger(trigger, modal) {
-  if (trigger && modal) {
-    trigger.addEventListener("click", () => modal.showModal());
-  }
-}
-
-function setupModalClose(button, modal) {
-  if (button && modal) {
-    button.addEventListener("click", () => modal.close());
-  }
-}
-
-// Attach event listeners (ensure elements exist in HTML)
-editBtnEl.addEventListener("click", () => {
-  modalEl.showModal();
-});
-cancelBtn.addEventListener("click", () => modalEl.close());
-newPostBtn.addEventListener("click", () => modalPost.showModal());
-closePostModal.addEventListener("click", () => modalPost.close());
-
-// Close modal by clicking outside
-window.addEventListener("click", (e) => {
-  if (e.target === modalPost || e.target === modalEl) {
-    modalPost.close();
-    modalEl.close();
-  }
-});

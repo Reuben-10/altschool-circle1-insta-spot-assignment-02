@@ -151,7 +151,8 @@ body {
 
 .modal {
   position: fixed;
-  background-color: #f8f8f8;
+  /* background-color: #f8f8f8; */
+  background: rgba(252, 245, 229, 1);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -286,8 +287,6 @@ body {
 
 /* -----styling for each image card when focused */
 .card.focused {
-  /* box-shadow: 0 0 12px rgba(0, 0, 0, 0.5); */
-  /* transform: translateY(-1rem); */
   transform: scale(1);
 }
 
