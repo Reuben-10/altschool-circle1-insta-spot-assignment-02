@@ -297,6 +297,15 @@ body {
   object-fit: cover;
 }
 
+.card-img.blur-up {
+  filter: blur(10px);
+  transition: filter 0.5s ease;
+}
+
+.card-img:not(.blur-up) {
+  filter: none;
+}
+
 .card-description {
   display: flex;
   justify-content: space-between;

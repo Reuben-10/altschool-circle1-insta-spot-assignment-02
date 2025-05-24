@@ -1,4 +1,4 @@
-import { cardsData } from "./cards.js";
+import { cardsData } from "../cards.js";
 
 const modal = document.getElementById("postModal");
 const postForm = document.getElementById("newPostForm");

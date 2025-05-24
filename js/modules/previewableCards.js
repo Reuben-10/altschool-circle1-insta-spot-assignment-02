@@ -1,8 +1,10 @@
-import { cardsData } from "./cards.js";
+import { cardsData } from "../cards.js";
+import { renderPreviewCard } from "../utils/render.js";
+import { getEl } from "../utils/dom.js";
 
 export function previewableCards(containerSelector) {
-  const container = document.querySelector(containerSelector);
-  const previewableModal = document.querySelector(".previewable-modal");
+  const container = getEl(containerSelector);
+  const previewableModal = getEl(".previewable-modal");
 
   let modalOpen = false;
   let clickedImage = null;
@@ -42,18 +44,7 @@ export function previewableCards(containerSelector) {
 
     // Create and insert the clicked card preview
     const displayPreviewableCard = document.createElement("div");
-    displayPreviewableCard.innerHTML = `
-         <div class="previewable-images">
-          <div class="card-img-container">
-            <img
-              src="${card.imgSrc}"
-              alt="${card.imgAlt}"
-              class="card-img preview-img"
-            />
-          </div>
-         <p class="previewable-title">${card.title}</p>
-      </div>
-         `;
+    displayPreviewableCard.innerHTML = renderPreviewCard(card);
     previewableModal.appendChild(displayPreviewableCard);
 
     // Close icon
@@ -80,7 +71,7 @@ export function previewableCards(containerSelector) {
     if (!modalOpen) return;
     modalOpen = false;
     previewableModal.close();
-    //  previewableModal.classList.remove("show"); // reset animation state
+    previewableModal.classList.remove("show"); // reset animation state
     document.body.removeEventListener("click", bodyClickHandler);
     clickedImage = null;
   }
