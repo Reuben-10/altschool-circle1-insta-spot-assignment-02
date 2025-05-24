@@ -1,4 +1,4 @@
-import { cardsData } from "./cards.js";
+import { cardsData } from "../cards.js";
 
 export function previewableCards(containerSelector) {
   const container = document.querySelector(containerSelector);

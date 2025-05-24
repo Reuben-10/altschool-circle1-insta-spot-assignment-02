@@ -1,4 +1,4 @@
-import { cardsData } from "./cards.js";
+import { cardsData } from "../cards.js";
 
 const style = document.createElement("style");
 style.textContent = `
