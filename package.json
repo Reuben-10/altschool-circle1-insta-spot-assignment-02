@@ -1,0 +1,23 @@
+{
+  "name": "altschool-circle1-insta-spot-assignment-02",
+  "version": "1.0.0",
+  "description": "A photo app",
+  "keywords": [
+    "photo"
+  ],
+  "homepage": "https://github.com/Reuben-10/altschool-circle1-insta-spot-assignment-02#readme",
+  "bugs": {
+    "url": "https://github.com/Reuben-10/altschool-circle1-insta-spot-assignment-02/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Reuben-10/altschool-circle1-insta-spot-assignment-02.git"
+  },
+  "license": "ISC",
+  "author": "circle-one",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run"
+  }
+}
