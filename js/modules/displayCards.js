@@ -69,6 +69,7 @@ export function displayCards(containerSelector) {
       </article>
     `;
     container.insertAdjacentHTML("beforeend", cardHTML);
+    console.log(card.imgSrc);
   });
 
   // Event listener for toggling 'liked' class on like icons

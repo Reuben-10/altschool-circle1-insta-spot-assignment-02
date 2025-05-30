@@ -15,9 +15,12 @@
   },
   "license": "ISC",
   "author": "circle-one",
-  "type": "commonjs",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "npm run"
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "parcel": "^2.15.2"
   }
 }
